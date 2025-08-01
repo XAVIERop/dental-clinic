@@ -1,0 +1,56 @@
+/* Custom CSS extracted from index.html */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.testimonial-slider {
+    scroll-behavior: smooth;
+}
+
+.gallery-item {
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.chatbot {
+    transition: all 0.3s ease;
+}
+
+.chatbot-expanded {
+    height: 400px;
+}
+
+/* Custom mobile fine-tuning */
+@media (max-width: 640px) {
+    /* Reduce padding in sections */
+    section {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Adjust testimonial slider padding */
+    .testimonial-slider {
+        padding-bottom: 1rem;
+    }
+
+    /* Reduce font sizes for headings */
+    h1, h2, h3 {
+        line-height: 1.2;
+    }
+
+    /* Adjust fixed contact buttons size */
+    .fixed.bottom-6.right-6 a {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    /* Adjust chatbot width */
+    #chatbot {
+        width: 280px !important;
+    }
+}
