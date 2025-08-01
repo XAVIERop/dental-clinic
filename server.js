@@ -10,6 +10,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+// Serve static files (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname)));
+
 // Helper function to save data to JSON file
 function saveData(filename, data) {
   const filePath = path.join(__dirname, filename);
@@ -52,6 +55,11 @@ app.post('/api/appointment', (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: 'Failed to save appointment data.' });
   }
+});
+
+// Route to serve index.html at /
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
